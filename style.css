@@ -1,0 +1,149 @@
+/* ===== CSS-переменные: цвета и шрифты ===== */
+:root {
+  --color-primary: #1e5aa8;   /* основной: синий */
+  --color-accent: #0b2a5c;    /* акцент: тёмно-синий */
+  --color-bg: #f2f7fd;
+  --color-card: #ffffff;
+  --color-text: #14325c;
+  --color-badge: #ffd54f;
+  --font-main: Arial, sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+h1, h2 { font-family: var(--font-heading); }
+h2 { color: var(--color-primary); }
+
+header, footer {
+  background: var(--color-primary);
+  color: #ffffff;
+  text-align: center;
+}
+footer { padding: 16px; }
+header h1 { margin: 0 0 6px; }
+header p { margin: 0; }
+
+/* ===== Позиционирование: static (по умолчанию) ===== */
+main {
+  position: static;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  padding: 0 16px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+figure { margin: 0; }
+img { display: block; max-width: 100%; height: auto; border-radius: 8px; }
+
+aside {
+  flex: 0 1 300px;
+  min-width: 200px;
+  background: var(--color-card);
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+
+section {
+  background: var(--color-card);
+  border-left: 5px solid var(--color-primary);
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+/* ===== Ссылки: :link, :visited, :hover, :focus, :active ===== */
+a:link { color: var(--color-primary); }
+a:visited { color: #5b2a86; }
+a:hover { color: var(--color-accent); text-decoration: none; }
+a:focus { outline: 3px solid var(--color-badge); outline-offset: 2px; }
+a:active { color: #000000; }
+
+/* ===== Карточки навыков ===== */
+/* relative: контейнер сетки */
+.skills-grid {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  position: relative;   /* чтобы бейдж позиционировался внутри карточки */
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding: 28px 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(11, 42, 92, 0.2);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 22px rgba(11, 42, 92, 0.35);
+}
+
+.skill-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 6px rgba(11, 42, 92, 0.6);
+}
+
+/* absolute: бейдж в правом верхнем углу карточки */
+.badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--color-badge);
+  color: var(--color-accent);
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* ===== Форма ===== */
+form { display: flex; flex-direction: column; gap: 10px; }
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  font-family: inherit;
+}
+input:focus, textarea:focus {
+  outline: 2px solid var(--color-accent);
+}
+
+button {
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { background: var(--color-accent); }
+button:active { background: #000000; }
+button:focus { outline: 3px solid var(--color-badge); outline-offset: 2px; }
