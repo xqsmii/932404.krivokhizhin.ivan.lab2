@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О себе — Иван Кривохижин</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #email {
+      padding: 14px;
+      border-radius: 10px;
+    }
+    #email:focus {
+      border-color: var(--color-accent);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(30, 90, 168, 0.35);
+    }
+  </style>
+</head>
+<body>
+
+  <header style="padding: 20px;">
+    <h1>Иван Кривохижин</h1>
+    <p>О себе: Студент-разработчик</p>
+  </header>
+
+  <div class="layout">
+    <figure>
+      <img src="https://sun9-66.vkuserphoto.ru/s/v1/ig2/zMvWQ4vwfGUY7yiykdr_Rb0QNJlRjbc5Qf41JFOE0UPr5Mf_peALyyaY9tmKfdwKpy8hex3iF1fdZSdlO8Ea3wK3.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=31qDmY3vSsWaXxmBsjaepKrxcEXtafgTBneWk2YVuVY&cs=1920x0" alt="Аватар студента" width="275" height="350">
+    </figure>
+
+    <aside>
+      <h2>Любимые технологии</h2>
+      <ul>
+        <li>VS Code</li>
+        <li>Git</li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <main>
+    <section>
+      <h2>Навыки</h2>
+      <ul class="skills-grid">
+        <li class="skill-card">C++<span class="badge">Top skill</span></li>
+        <li class="skill-card">Python</li>
+        <li class="skill-card">SQL</li>
+        <li class="skill-card">HTML и CSS</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Проекты</h2>
+      <ol>
+        <li>Консольный менеджер задач на C++</li>
+        <li>База данных учёта студентов (SQL)</li>
+        <li>Математическая модель очереди на Python</li>
+        <li>Личная страница на HTML и CSS</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Обратная связь</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Ваше имя">
+        <input type="email" id="email" name="email" placeholder="Ваш email">
+        <textarea name="message" rows="5" placeholder="Ваше сообщение"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Иван Кривохижин. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
